@@ -5,18 +5,13 @@
     So we must start working on our dreams right away!! '''
 import sys
 import datetime
-from calendar import monthrange
 
 TOTAL_LIFE = 90
 
 if __name__ == '__main__':
-    day = int(sys.argv[3])
-    month = int(sys.argv[2])
-    year = int(sys.argv[1])
-    born = datetime.date(year, month, day)
+    born = datetime.date(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
     now = datetime.datetime.now().date()
-    delta = now - born
-    days_lived = delta.days
+    days_lived = (now - born).days
     age = days_lived / 365
     age_weeks = days_lived / 7
     weeks_left = TOTAL_LIFE * 52 - age_weeks
@@ -30,7 +25,7 @@ if __name__ == '__main__':
     print 'Percentage of life done: {}'.format(percent_life)
 
     count = 0
-    for i in range(TOTAL_LIFE * 52/ 130):
+    for i in range(TOTAL_LIFE * 52 / 130):
         line = ''
         for j in range(130):
             if count < age_weeks:
