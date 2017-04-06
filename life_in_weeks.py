@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print 'Age: {}'.format(age)
     print 'Number of weeks lived: {}'.format(age_weeks)
     print 'Number of weeks till 90: {}'.format(weeks_left)
-    print 'Percentage of live done: {}'.format(percent_life)
+    print 'Percentage of life done: {}'.format(percent_life)
 
     count = 0
     for i in range(39):
